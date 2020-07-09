@@ -1,3 +1,12 @@
+/*
+#06623b -dark green
+#649d66 - light green
+
+f6d743
+f6f578
+*/
+
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -84,4 +93,13 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+
+
+.bg-primary-green{
+  background-color: #06623b!important;
+}
+.list-group-item.active{
+background-color:#649d66;
 }

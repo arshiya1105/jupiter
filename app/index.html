@@ -10,6 +10,12 @@
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap-side-drawer/public/css/side-drawer.css">
+
+
+
+
+
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -19,36 +25,60 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container">
 
 
-      <div class="header">
-        <ul class="nav nav-pills float-right">
-          <li class="nav-item">
-            <a href="#" class="nav-link active">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="aboutus.html" class="nav-link">About</a>
-          </li>
-
-          <li class="nav-item">
-              <a href="portfolio.html" class="nav-link">Portfolio</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#" class="nav-link">contact nows</a>
-              </li>
-        </ul>
-        <h3 class="text-muted">jupiter</h3>
+    <div id="side-drawer" class="position-fixed">
+        <div class="h-100 bg-white">
+          <div class="p-4 bg-dark">
+            <a href="#">
+              <h1 class="text-white">Title</h1>
+            </a>
+          </div>
+          <ul class="list-group" onclick="closeSideDrawer()">
+            <a href="#" class="list-group-item list-group-item-action border-0 rounded-0 active">Link</a>
+            <a href="#" class="list-group-item list-group-item-action border-0 rounded-0">Link</a>
+          </ul>
+        </div>
       </div>
+      <div class="position-absolute w-100" style="bottom: 0">
+        <div class="container px-4 py-3 text-muted">
+          <small>
+            Side Drawer by
+            <a class="text-muted text-decoration-none" href="http://github.com/danielflachica/" target="_blank">Daniel Lachica</a>
+          </small>
+        </div>
+      </div>
+      <div id="side-drawer-void" class="position-fixed d-none" onclick="closeSideDrawer()"></div>
 
 
-<!-- thi is new edit  -->
+      <nav class="navbar navbar-dark bg-primary-green fixed-top">
+          <button class="navbar-toggler" type="button" onclick="openSideDrawer()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="navbar-text">
+            <!-- Project Title -->
+          </span>
+        </nav>
 
-    </div>
+
+        <main class="container my-5 bg-white">
+            <div class="p-4 p-md-5">
+              <!-- Place Content Here -->
+            </div>
+          </main>
+
+
+
+
+
+
+
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="/node_modules/bootstrap-side-drawer/public/js/side_drawer.js"></script>
+
+
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

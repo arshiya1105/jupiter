@@ -103,3 +103,9 @@ body {
 .list-group-item.active{
 background-color:#649d66;
 }
+
+
+.list-group-item-action:hover {
+  color: #000;
+  background-color:#f6f578;
+}
